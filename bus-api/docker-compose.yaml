@@ -1,0 +1,28 @@
+services:
+  frontend:
+    image: bus-image1:v0 
+    ports:
+      - "8080:8080"
+    networks:
+      - front-tier
+      - back-tier
+  backend:
+    image: postgres:16-bullseye
+    restart: always
+    # set shared memory limit when using docker-compose
+    shm_size: 128mb
+    volumes:
+      - ./image-data:/var/lib/postgresql/data
+    ports:
+      - "5454:5432"  # Map the host port 5432 to the container port 5432
+    environment:
+      POSTGRES_USER: postgres 
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: bus_api
+    networks:
+      - back-tier
+networks:
+  front-tier: {}
+  back-tier: {}
+
+
