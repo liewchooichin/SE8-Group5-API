@@ -85,7 +85,8 @@ Supply to front-end, the route is prefixed by **/app**. This will return the fir
   - localhost:8080/app/routes/service/80/direction/1
 - Bus arrival - Notes that this will return the Datamall string as it is.
   - /app/arrival
-
+  - localhost:8080/app/arrival?BusStopCode=05631
+  - localhost:8080/app/arrival?BusStopCode=05631&ServiceNo=121
 
 ## From datamall
 
