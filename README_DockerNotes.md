@@ -6,6 +6,8 @@ https://spring.io/guides/gs/spring-boot-docker
 
 https://docs.docker.com/compose/intro/compose-application-model/
 
+If you have error like `permission denied` when using `docker`, put a `sudo docker` to run it. 
+
 # Step 1: Package the project into JAR
 
 Do a maven package at the bus-api directory, where the `pom.xml` is installed. When the package is done manually here, we can check for any errors. For example, when the tests fail, we can see it.
