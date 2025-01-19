@@ -10,6 +10,8 @@
 name: Publish Docker image
 
 on:
+  push:
+    branches: [ "branch-cc-2" ]
   release:
     types: [published]
   workflow_dispatch:
