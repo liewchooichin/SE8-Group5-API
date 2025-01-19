@@ -2,6 +2,8 @@
 # Directory structure
 
 Our directory is like this:
+
+```
 SE-Group5-API/
 ├── .github/workflows/<action_name>.yml 
 ├── bus-api/
@@ -10,6 +12,7 @@ SE-Group5-API/
 |   ├── target
 │   ├── ... other files ...
 └── ... other files ...
+```
 
 When building the Dockerfile, the directory must be correct.
 
