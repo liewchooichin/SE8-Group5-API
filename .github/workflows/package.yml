@@ -29,12 +29,14 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Change into bus-api directory
-      run: cd bus-api
     - name: Maven test
-      run: mvn -DAPP_API_KEY=${{ secrets.APP_API_KEY }} test
+      run: |
+        cd bus-api
+        mvn -DAPP_API_KEY=${{ secrets.APP_API_KEY }} test
     - name: Maven package
-      run: mvn -B package --file pom.xml
+      run: |
+        cd bus-api
+        mvn -B package --file pom.xml
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     #- name: Update dependency graph
