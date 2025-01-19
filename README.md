@@ -1,7 +1,11 @@
 # SE8-Group5-API
 
-Version 4.0.0
-- Removed bus stop @DecimalMax @DecimalMin for Latitude and Longitude causes error during the pull of BusStops from LTA Datamall because there's bus stops in Malaysia but my Latitude Longitude min and max range settings to only Singapore land block those bus stops from getting pulled from LTA Datamall. This was causing issue when trying to build a Docker image.
+Version 5.1.0
+- Added .circleci folder and config.yml
+
+Version 5.0.0
+- Renamed app.api.key to APP_API_KEY because circleCi do not allow ".", only "_" for env variable name
+- Renamed UserAccessControllerTest.java to a .txt file
 
 ## Keeping Datamall API secret
 
@@ -12,7 +16,7 @@ In application.properties, put this in:
 
 Comment out the previous line by Jimmy :
 
-`#app.api.key=${MY_API_KEY}`
+`#APP_API_KEY=${MY_API_KEY}`
 
 ### Step 2:
 
@@ -20,7 +24,7 @@ Create a an application-dev.properties file in the same folder as the applicatio
 
 In the file, put this line:
 
-`app.api.key=<YOUR API KEY>`
+`APP_API_KEY=<YOUR API KEY>`
 
 ### No action required
 

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RestController
 public class ApiTestController {
     
-    @Value("${app.api.key}")
+    @Value("${APP_API_KEY}")
     private String apiKey;
 
     @GetMapping("/app/test-protect")

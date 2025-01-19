@@ -1,5 +1,7 @@
-{"properties": [{
-  "name": "app.api.key",
-  "type": "java.lang.String",
-  "description": "created custom property 'app.api.key'"
-}]}
+{"properties": [
+  {
+    "name": "APP_API_KEY",
+    "type": "java.lang.String",
+    "description": "A description for 'APP_API_KEY'"
+  }
+]}
