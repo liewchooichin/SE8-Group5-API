@@ -32,6 +32,8 @@ Because of the way the directory is strucutered, we need to set the source files
 
 The **ls -a $GITHUB_WORKSPACE** is not needed for the action. It is for myself to see the files in the directory.
 
+GITHUB_WORKSPACE is a built-in environment variable in GitHub Actions. It represents the root directory where your workflow runs. Essentially, it's the top-level folder for your entire repository within the GitHub Actions runner environment.
+
 The line `context` and `file` will let the build action to get files from the correct directory.
 
 ```
