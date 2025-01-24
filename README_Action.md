@@ -28,7 +28,7 @@ In the page **Repository Secrets **, create **New repository secrets** for
 
 On **push** and **pull-request**, the action **Java CI with Maven** (package.yml) will run.
 
-On **release**, the action **Package JAR and Publish Docker image** (package_publish.yml) will run.
+On **release**, the action **Package JAR and Publish Docker image** (package_publish.yml) will run. The branch must be set as the **default** branch. The **Releases** can be found from the lower right pane of the Repository page.
 
 # Test and Postgres
 
@@ -36,11 +36,11 @@ The integration test will fail because the tests need a **Postgres** database se
 
 # Explanation on this part of directory
 
-Because of the way the directory is strucutered, we need to set the source files and Docker_Actions file to be in the **bus-api** directory.
+Because of the way the directory is structured, we need to set the source files and Docker_Actions file to be in the **bus-api** directory.
 
 The **ls -a $GITHUB_WORKSPACE** is not needed for the action. It is for myself to see the files in the directory.
 
-GITHUB_WORKSPACE is a built-in environment variable in GitHub Actions. It represents the root directory where your workflow runs. Essentially, it's the top-level folder for your entire repository within the GitHub Actions runner environment.
+GITHUB_WORKSPACE is a built-in environment variable in GitHub Actions. It represents the root directory where the workflow runs. Essentially, it's the top-level folder for your entire repository within the GitHub Actions runner environment.
 
 The line `context` and `file` will let the build action to get files from the correct directory.
 
