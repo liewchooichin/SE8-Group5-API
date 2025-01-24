@@ -14,7 +14,7 @@ services:
     volumes:
       - ./image-data:/var/lib/postgresql/data
     ports:
-      - "5454:5432"  # Map the host port 5432 to the container port 5432
+      - "5454:5432"  # Map the host port 5454 to the container port 5432
     environment:
       POSTGRES_USER: postgres 
       POSTGRES_PASSWORD: postgres
