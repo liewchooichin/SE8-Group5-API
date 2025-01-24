@@ -16,6 +16,14 @@ SE-Group5-API/
 
 When building the Dockerfile, the directory must be correct.
 
+# Create the Repo secrets
+
+In **Project - Settings - Security - Secrets and Variables - Actions.**
+
+In the page **Repository Secrets **, create **New repository secrets** for 
+- **DOCKER_USERNAME**: Your Docker Hub username,
+- **DOCKER_PASSWORD**: Your Docker Hub password.
+
 # Actions
 
 On **push** and **pull-request**, the action **Java CI with Maven** (package.yml) will run.
